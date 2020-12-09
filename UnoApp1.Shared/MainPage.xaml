@@ -25,9 +25,10 @@
 					<TextBox Text="{Binding Box22, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" />
 					<TextBlock Text="{Binding Block21}" Margin="20" FontSize="30" />
 				</StackPanel>
-				
-				<ListView x:Name="listView" Height="150" Background="LightGray" ItemsSource="{Binding}"/>
-				
+
+				<ListView x:Name="listView" Height="150" Background="LightGray"
+						  ItemsSource="{Binding}" SelectionChanged="listView_SelectionChanged" />
+
 			</StackPanel>
 
 		</ScrollViewer>
