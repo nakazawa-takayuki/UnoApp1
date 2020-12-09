@@ -1,0 +1,1 @@
+C:\works\UnoApp1\UnoApp1\UnoApp1.UWP\UnoApp1.UWP.csproj;x86
