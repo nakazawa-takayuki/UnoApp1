@@ -28,6 +28,7 @@ namespace UnoApp1
             this.InitializeComponent();
             this.DataContext = new MainPageViewModel();
             this.panel2.DataContext = new MainPageViewModeBindingBase();
+            listView.DataContext = new[] { "草加せんべい", "越谷かもねぎ鍋", "深谷ネギ", "十万石まんじゅう", "くらづくり最中" };
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
