@@ -62,6 +62,20 @@ namespace UnoApp1
             // just ensure that the window is active
             if (rootFrame == null)
             {
+                Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += (s, args) =>
+                {
+                    // 戻れない場合は何もしない
+                    if (!rootFrame.CanGoBack)
+                    {
+                        return;
+                    }
+
+                    // 戻れる場合はフレームの GoBack メソッドを呼んで
+                    rootFrame.GoBack();
+                    // 戻るボタンを処理したことを通知する
+                    args.Handled = true;
+                };
+
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
 
